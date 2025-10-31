@@ -9,7 +9,7 @@ import 'package:paperbrain/src/presentation/features/home/screens/home_screen.da
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Replace with your actual API key (use env variables in production)
-  const geminiApiKey = 'AIzaSyD_Qyk-5vVhu60DGBaTusQ6ytS-_uKpMxE';
+  const geminiApiKey = 'YOUR_GEMINI_API_KEY_HERE';
 
   // Initialize DI
   await di.initDependencies(geminiApiKey: geminiApiKey);
