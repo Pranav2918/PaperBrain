@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:paperbrain/src/presentation/features/home/cubits/pdf_cubit.dart';
 import 'package:paperbrain/src/presentation/features/chatbot/cubit/chat_cubit.dart';
 import 'package:paperbrain/src/data/di/injector.dart' as di;
@@ -9,10 +10,9 @@ import 'package:paperbrain/src/presentation/features/home/screens/home_screen.da
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Replace with your actual API key (use env variables in production)
-  const geminiApiKey = 'YOUR_GEMINI_API_KEY_HERE';
 
   // Initialize DI
-  await di.initDependencies(geminiApiKey: geminiApiKey);
+  await di.initDependencies(geminiApiKey: "${dotenv.env['API_KEY']}");
 
   runApp(const MyApp());
 }

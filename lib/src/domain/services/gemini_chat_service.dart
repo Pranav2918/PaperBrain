@@ -6,7 +6,7 @@ class GeminiService {
   String? _pdfContext;
 
   GeminiService(String apiKey) {
-    _model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: apiKey);
+    _model = GenerativeModel(model: 'gemini-2.5-flash-lite', apiKey: apiKey);
   }
 
   void initializeChatWithPDF(String pdfContent) {
